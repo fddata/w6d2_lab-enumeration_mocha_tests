@@ -61,6 +61,11 @@ describe('Cinema', function () {
     assert.strictEqual(actual, 622);
   });
 
+  it('should be able to filter films by genre', function(){
+    const actual = cinema.filmsByProperty('genre', 'action');
+    assert.deepEqual(actual, [blackPanther]);
+  });
+
 });
 
 module.exports = Cinema;

@@ -12,10 +12,10 @@ Cinema.prototype.getTitles = function () {
 };
 
 Cinema.prototype.findByTitle = function (target) {
-  const result = this.films.filter((film) => {
+  const result = this.films.find((film) => {
     return film.title === target;
   });
-  return result[0];
+  return result;
 };
 
 Cinema.prototype.filterByGenre = function (genre) {
@@ -50,17 +50,12 @@ Cinema.prototype.totalRunTime = function () {
   return result2;
 };
 
-
-
-//
-// const getEvenNumbers = () => {
-//   const result = numbers.filter((number) => {
-//     return number % 2 === 0;
-//   });
-//   return result;
-// };
-// console.log("get getEvenNumbers result:", getEvenNumbers());
-
+Cinema.prototype.filmsByProperty = function (property, value) {
+  const result = this.films.filter((film) => {
+    return film[property] === value;
+  });
+  return result;
+};
 
 
 
