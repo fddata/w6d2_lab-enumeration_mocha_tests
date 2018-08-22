@@ -18,6 +18,14 @@ Cinema.prototype.findByTitle = function (target) {
   return result[0];
 };
 
+Cinema.prototype.filterByGenre = function (genre) {
+  const result = this.films.filter((film) => {
+    return film.genre === genre;
+  });
+  return result;
+};
+
+
 //
 // const getEvenNumbers = () => {
 //   const result = numbers.filter((number) => {
