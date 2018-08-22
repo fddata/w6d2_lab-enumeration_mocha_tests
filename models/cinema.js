@@ -32,6 +32,25 @@ Cinema.prototype.filmsByYear = function (target) {
   return result;
 };
 
+Cinema.prototype.filmsByLength = function (target) {
+  const result = this.films.every((film) => {
+    return film.length >= target;
+  });
+  return result;
+};
+
+Cinema.prototype.totalRunTime = function () {
+  let filmsArray = [];
+  const result = this.films.forEach((film) => {
+    filmsArray.push(film.length);
+  });
+  result2 =  filmsArray.reduce((total, number) => {
+    return total + number;
+  });
+  return result2;
+};
+
+
 
 //
 // const getEvenNumbers = () => {
