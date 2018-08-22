@@ -25,6 +25,13 @@ Cinema.prototype.filterByGenre = function (genre) {
   return result;
 };
 
+Cinema.prototype.filmsByYear = function (target) {
+  const result = this.films.some((film) => {
+    return film.year === target;
+  });
+  return result;
+};
+
 
 //
 // const getEvenNumbers = () => {
